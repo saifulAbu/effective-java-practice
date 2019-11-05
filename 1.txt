@@ -1,0 +1,7 @@
+1. consider static factory methods
+
+class Boolean {
+	Boolean static Boolean valueOf(boolean b){
+		return b? Boolean.True : Boolean.False;
+	}
+}
