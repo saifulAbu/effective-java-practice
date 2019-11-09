@@ -1,0 +1,80 @@
+// classical constructor method
+class Test {
+  int a = 0;
+  int b = 0;
+  int c = 0;
+
+  Test(int a){
+    this.a = a;
+  }
+
+  Test(int a, int b) {
+    this.a = a;
+    this.b = b;
+  }
+
+  Test(int a, int b, int c) {
+    this.a = a;
+    this.b = b;
+    this.c = c;
+  }
+}
+//usage
+Test t = new Test(1, 2);
+
+
+// java beans method
+class Test {
+  int a = 0;
+  int b = 0;
+  int c = 0;
+
+  pubilc void setA(int a){
+    this.a = a;
+  }
+
+  public void setB(int b){
+    this.b = b;
+  }
+
+  public void setC(int c){
+    this.c = c;
+  }
+}
+
+//usage
+Test t = new Test();
+t.setA(1);
+t.setB(3);
+
+//builder pattern
+class Test {
+  int a = 0;
+  int b = 0;
+  int c = 0;
+
+  public class Builder {
+    public Builder(int a){
+      this.a = a;
+    }
+
+    Builder setB(int b){
+      this.b = b;
+    }
+
+    Builder setC(int c){
+      this.c = c;
+    }
+
+    Test build(){
+      return new Test(this);
+    }
+  }
+
+  private Test(Builder bld) {
+    a = bld.a;
+    b = bld.b;
+    c = bld.c;
+  }
+
+}
