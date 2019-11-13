@@ -1,0 +1,11 @@
+public class SpellChecker {
+  private final Dictionary dictionary;
+
+  public SpellChecker(Dictionary d) {
+    dictionary = d;
+  }
+
+  public boolean spellCheck(String word) {
+    return dictionary.isValidWord(word);
+  }
+}

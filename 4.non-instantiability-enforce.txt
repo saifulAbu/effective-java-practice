@@ -1,0 +1,7 @@
+class UtilityClass {
+  // suppress instantiablity
+  private UtilityClass() {
+    // prevents accidental call from within the class
+    throw new AssertionException();
+  }
+}

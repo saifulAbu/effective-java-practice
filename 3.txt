@@ -1,0 +1,7 @@
+public class Elvis {
+  private final static INSTANCE = new Elvis();
+
+  private Elivis() {}
+
+  public static Elvis getInstance() { return INSTANCE; }
+}
