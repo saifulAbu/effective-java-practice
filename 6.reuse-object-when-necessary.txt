@@ -1,0 +1,15 @@
+// the following string is not reused
+String str = new String("abc");
+
+//the following strings both refer to the same object, handled by jvm
+String prt = "abc";
+String amc = "abc";
+
+//reuse regular expression
+class Checker {
+  private static Pattern MYPAT =  new Pattern("faljdfklaq0w98e09q").compile();
+
+  public matches(String s){
+    return MYPAT.matches(s);
+  }
+}
